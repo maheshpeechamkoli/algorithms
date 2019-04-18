@@ -1,0 +1,11 @@
+E:\AD\hunting\algorithams\bin\Debug\netcoreapp2.1\algorithams.deps.json
+E:\AD\hunting\algorithams\bin\Debug\netcoreapp2.1\algorithams.runtimeconfig.json
+E:\AD\hunting\algorithams\bin\Debug\netcoreapp2.1\algorithams.runtimeconfig.dev.json
+E:\AD\hunting\algorithams\bin\Debug\netcoreapp2.1\algorithams.dll
+E:\AD\hunting\algorithams\bin\Debug\netcoreapp2.1\algorithams.pdb
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.csprojAssemblyReference.cache
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.csproj.CoreCompileInputs.cache
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.AssemblyInfoInputs.cache
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.AssemblyInfo.cs
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.dll
+E:\AD\hunting\algorithams\obj\Debug\netcoreapp2.1\algorithams.pdb
