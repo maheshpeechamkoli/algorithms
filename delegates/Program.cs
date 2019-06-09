@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using ActionDemo;
+using Clone;
 
 namespace delegates
 {
@@ -10,6 +12,25 @@ namespace delegates
     {
         static void Main(string[] args)
         {
+            // Number and Count
+            FindNumberCount();
+
+            //Shallow Copy
+            
+            Person obj = new Person();
+            obj.age = 30;
+
+            Clone.Employee objEmpSalary = new Clone.Employee(1000);
+            obj.objEmp = objEmpSalary;
+            
+            //ShallowCopy obj2 = obj.ShallowCopyClass(obj);
+            Person obj2 = obj.CreateDeepCopy(obj);
+            
+            objEmpSalary.Salary = 3000;
+                       
+            Console.WriteLine(obj.objEmp.Salary);
+            Console.WriteLine(obj2.objEmp.Salary);
+
             // Maximum Employee Salry based on department
             EmployeeMaster();
 
@@ -31,8 +52,9 @@ namespace delegates
             /// Action
             /// </summary>
             /// <returns></returns>
-            ActionDemo obj = new ActionDemo();
-            obj.aveva();
+            
+            ActionTest objAction = new ActionTest();
+            objAction.FindSalary();
 
             Console.WriteLine("Delegate");
             Print printDel = PrintNumber;
@@ -89,6 +111,8 @@ namespace delegates
             empList.Add(new Employee { empId = 5, Deptid= 2, Salary= 50000  });
             empList.Add(new Employee { empId = 6, Deptid= 2, Salary= 90000  });
 
+            var abg = empList.Where(z=>z.Salary>100).ToList();
+
             // 1 1 80000
             // 1 2 90000
 
@@ -96,7 +120,12 @@ namespace delegates
                 empId = a.Where(x=> x.Salary ==  a.Max(m => x.Salary)).FirstOrDefault().empId,        
                 Deptid = a.Key,
                 Salary = a.Max(x => x.Salary)
-            });
+            }).ToList();
+
+            foreach(var a in result)
+            {
+                
+            }
 
             var highest =   from e in empList
                             group e by e.Deptid into dptgrp
@@ -109,6 +138,24 @@ namespace delegates
                             };
 
 
+        }
+        public static void FindNumberCount()
+        {
+            int[] num = { 10, 20, 30, 40, 10, 10, 20, 30 };
+            var dict = new Dictionary<int,int>();
+            foreach(var key in num)
+            {
+                if(dict.ContainsKey(key))
+                {
+                    dict[key]++;
+                }
+                else
+                {
+                    dict[key] = 1;  
+                }
+            }
+            foreach(var pair in dict)  
+            Console.WriteLine("Value {0} occurred {1} times", pair.Key, pair.Value);  
         }
 
     }
