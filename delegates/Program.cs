@@ -8,10 +8,33 @@ namespace delegates
 {
     // step 1
     public delegate void Print(int value);
+    public class A
+    {}
+    public class B
+    {}
     class Program
     {
         static void Main(string[] args)
         {
+            
+
+            // System Object
+             A a = new A();             
+             A a3 = a;
+             var b = a.GetHashCode();
+             B b5 = new B();
+             var g5 = b5.GetHashCode();
+
+             // Extention Method           
+            a.GlobelExtention();
+
+            var b1 = a.GetType();
+            var b2 = a.ToString();
+            
+            var flag = a.Equals(a3);
+
+            // Palindrom 
+            Palindrome.IsPalindrom("MALAYALAM");
             // Number and Count
             FindNumberCount();
 
